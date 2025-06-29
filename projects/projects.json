@@ -1,0 +1,58 @@
+[
+  {
+    "name": "JadwalPlus",
+    "desc": "sebuah jadwal dimana pengguna mengelola jadwal dengan baik, mengorganisir dan mengatur aktivitas belajar",
+    "image": "jadwalplus",
+    "category": "LKS",
+    "links": {
+      "view": "https://jadwalplus-client.vercel.app/"
+    }
+  },
+  {
+    "name": "JadwalPlus",
+    "desc": "sebuah jadwal dimana pengguna mengelola jadwal dengan baik, mengorganisir dan mengatur aktivitas belajar.",
+    "image": "jadwalplus",
+    "category": "android",
+    "links": {
+      "view": "https://www.linkedin.com/posts/jigar-sable_androiddev-androidstudio-java-activity-6955224473822199808-JT0j",
+      "code": "https://github.com/jigar-sable/sppu-prep-android"
+    }
+  },
+
+  {
+    "name": "Pengumuman Kelulusan",
+    "desc": "Web ini dibuat untuk sebagai informasi yang digunakan untuk pengumuman siswa dan siswi yang Lulus Sekolah.",
+    "image": "kelulusan",
+    "category": "mern",
+    "links": {
+      "view": "https://kelulusan.serveramin.web.id/"
+    }
+  },
+  {
+    "name": "Monitoring Jaringan",
+    "desc": "Monitoring jaringan ini project SKRIPSI saya, yang saya buat untuk memonitoring Jaringan di tempat kerja saya baik jaringan yang connect ataupun disconnect.",
+    "image": "monitoring",
+    "category": "mern",
+    "links": {
+      "view": "https://t.me/+f3AkokPFl4VhZTA1"
+    }
+  },
+    {
+    "name": "OwnCloud",
+    "desc": "Owncloud ini saya install didalam server saya menggunakan debian sebagai media penyimpanan file local di Sekolahan namun bisa diakses baik local atau publik melalui website",
+    "image": "owncloud",
+    "category": "mern",
+    "links": {
+      "view": "https://owncloud.serveramin.web.id/index.php/login"
+    }
+  },
+  {
+    "name": "Inventaris Barang",
+    "desc": "Inventaris Barang ini dibuat untuk mendata barang dari DANABOS ataupun barang beli baik kondisi baik maupun tidak layak sebagai database.",
+    "image": "inventaris",
+    "category": "mern",
+    "links": {
+      "view": "https://inventaris.serveramin.web.id/"
+    }
+  }
+]

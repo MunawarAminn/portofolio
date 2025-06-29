@@ -1,0 +1,104 @@
+[
+  {
+    "name": "Linux",
+    "icon": "https://img.icons8.com/color/48/000000/linux--v1.png"
+  },
+   {
+    "name": "Ubuntu",
+    "icon": "https://img.icons8.com/color/48/000000/ubuntu--v1.png"
+  },
+  {
+    "name": "Debian",
+    "icon": "https://img.icons8.com/color/48/000000/debian.png"
+  },
+  {
+    "name": "VMware",
+    "icon": "https://img.icons8.com/color/48/000000/vmware.png"
+  },
+  {
+    "name": "Proxmox",
+    "icon": "assets/icons/proxmox2.svg"
+  },
+     {
+    "name": "TrueNAS",
+    "icon": "assets/icons/truenas.png"
+  },
+  {
+  "name": "Owncloud",
+  "icon": "assets/icons/owncloud.png"
+},
+  {
+    "name": "MikroTik",
+    "icon": "assets/icons/mikrotik.svg"
+  },
+  {
+  "name": "Fiber Optic",
+  "icon": "assets/icons/fiber.png"
+},
+  {
+  "name": "Unifi",
+  "icon": "assets/icons/unifi.png"
+},
+
+  {
+    "name": "Windows",
+    "icon": "assets/icons/windo.png"
+  },
+{
+  "name": "Git Bash",
+  "icon": "assets/icons/git.svg"
+},
+{
+  "name": "WinSCP",
+  "icon": "assets/icons/winscp.png"
+},
+{
+  "name": "Office",
+  "icon": "https://img.icons8.com/color/48/microsoft-office-2019.png"
+},
+    {
+        "name": "HTML5",
+        "icon": "https://img.icons8.com/color/48/000000/html-5--v1.png"
+    },
+    {
+        "name": "CSS",
+        "icon": "https://img.icons8.com/color/48/000000/css3.png"
+    },
+    {
+        "name": "JavaScript",
+        "icon": "https://img.icons8.com/color/48/000000/javascript--v1.png"
+    },
+    {
+        "name": "PHP",
+        "icon": "https://img.icons8.com/offices/48/000000/php-logo.png"
+    },
+    {
+        "name": "MySQL",
+        "icon": "https://img.icons8.com/color/48/000000/mysql-logo.png"
+    },
+
+    {
+        "name": "GitHub",
+        "icon": "https://img.icons8.com/glyph-neue/48/ffffff/github.png"
+    },
+    {
+  "name": "TeamViewer",
+  "icon": "assets/icons/team.png"
+},
+{
+  "name": "OBS",
+  "icon": "assets/icons/obs.png"
+},
+
+{
+  "name": "CapCut",
+  "icon": "assets/icons/capcut.png"
+},
+
+{
+  "name": "CorelDRAW",
+  "icon": "https://img.icons8.com/color/48/coreldraw.png"
+}
+
+  
+]

@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="jigar sable, portfolio, jigar, full stack dev, personal portfolio lifecodes, portfolio design, portfolio website, personal portfolio" />
+    <meta name="description" content="Welcome to Jigar's Portfolio. Full-Stack Web Developer and Android App Developer" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Favicon -->
+    <link id='favicon' rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-png">
+    <title>Portfolio | Munawar Amin</title>
+    <style>
+    /* Certificate section styles */
+    .certificates {
+        padding: 90px 0;
+    }
+    
+    .certificates-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    
+    .certificate-box {
+        background: var(--bg);
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        padding: 1.5rem;
+        transition: all 0.4s ease;
+        position: relative;
+        overflow: hidden;
+        border: none;
+    }
+    
+    /* Stylish frame effect */
+
+    
+    .certificate-box:hover::before {
+        opacity: 1;
+        transform: scale(0.98);
+    }
+    
+    .certificate-box:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
+    
+    .certificate-img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 5px;
+        margin-bottom: 1rem;
+        transition: all 0.4s ease;
+        border: 1px solid rgba(0,0,0,0.1);
+        box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+    
+    .certificate-box:hover .certificate-img {
+        transform: scale(1.03);
+        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+    
+    .certificate-info {
+        text-align: center;
+    }
+    
+    .certificate-info h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+        color: var(--heading);
+        background: linear-gradient(90deg, #4a90e2, #9455d3);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    
+    .certificate-info p {
+        color: var(--text);
+        margin-bottom: 1rem;
+    }
+    
+    .view-btn {
+        display: inline-block;
+        padding: 0.6rem 1.2rem;
+        background: linear-gradient(135deg, #4a90e2, #9455d3);
+        color: white;
+        border-radius: 6px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        font-weight: 500;
+        box-shadow: 0 4px 8px rgba(74, 144, 226, 0.3);
+    }
+    
+    .view-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(148, 85, 211, 0.4);
+        background: linear-gradient(135deg, #9455d3, #4a90e2);
+    }
+    
+    /* Modal styles */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        overflow: auto;
+    }
+    
+    .modal-content {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 800px;
+        max-height: 90vh;
+        margin-top: 5vh;
+        border: 4px solid;
+        border-image: linear-gradient(45deg, #4a90e2, #9455d3, #ff6b00) 1;
+        border-radius: 8px;
+    }
+    
+    .close {
+        position: absolute;
+        top: 20px;
+        right: 35px;
+        color: white;
+        font-size: 40px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .close:hover {
+        color: #ff6b00;
+        transform: scale(1.2);
+    }
+</style>
+</head>
+<body oncontextmenu="return false">
+
+<header>
+        <a href="/" class="logo"><i class="fas fa-smile"></i></i>Munawar Amin</a>
+
+
+        <div id="menu" class="fas fa-bars"></div>
+        <nav class="navbar">
+            <ul>
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#work">Project</a></li>
+            <li><a href="#certificates">Certificates</a></li>
+
+            </ul>
+        </nav>
+</header>
+<!-- navbar ends -->
+
+
+<!-- hero section starts -->
+<section class="home" id="home">
+    <div id="particles-js"></div>
+
+    <div class="content">
+    <h2>Hi, I'm Munawar  <br/> <span></span></h2>
+    <p>i am into <span class="typing-text"></span></p>
+    <a href="#about" class="btn"><span>About Me</span>
+      <i class="fas fa-arrow-circle-down"></i>
+    </a>
+    <div class="socials">
+        <ul class="social-icons">
+          <li><a class="linkedin" aria-label="LinkedIn" href="http://www.linkedin.com/in/munawar-amin/" target="_blank"><i class="fab fa-linkedin"></i></a></li> 
+          <li><a class="github" aria-label="GitHub" href="https://github.com/MunawarAminn" target="_blank"><i class="fab fa-github"></i></a></li>
+          <li><a class="twitter" aria-label="Twitter" href="mailto:munawaramin99@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a></li>
+          <li><a class="telegram" aria-label="Telegram" href="https://t.me/Turiss2" target="_blank"><i class="fab fa-telegram-plane"></i></a></li>
+          <li><a class="instagram" aria-label="Instagram" href="https://www.instagram.com/munawar_amin2/"><i class="fab fa-instagram" target="_blank"></i></a></li>
+        <!--  <li><a class="dev" aria-label="Dev" href="https://dev.to/jigarsable" target="_blank"><i class="fab fa-dev"></i></a></li> -->
+        </ul>
+      </div>
+    </div>
+<div class="image">
+    <img draggable="false" class="tilt" src="./assets/images/hero.png" alt="">
+</div>
+</section>
+<!-- hero section ends -->
+
+
+<!-- about section starts -->
+<section class="about" id="about">
+    <h2 class="heading"><i class="fas fa-user-alt"></i> About <span>Me</span></h2>
+    
+    <div class="row">
+
+    <div class="image">
+        <img draggable="false" class="tilt" src="./assets/images/profile2.jpg" alt="">
+    </div>
+    <div class="content">
+        <h3>I'm Munawar</h3>
+        <span class="tag">IT Infrastructure</span>
+        
+        <p>A fresh graduate with a Bachelor's degree in Informatics from Tiga 
+          Serangkai University, with over 4 years of experience as an IT Support and 3 
+          years as a freelance IT Support specialist. Skilled in network 
+          troubleshooting, Linux server configuration and management, and 
+          maintaining hardware and software systems. Also experienced in front-
+          end development with a focus on responsive and user-friendly design. </p>
+        
+        <div class="box-container">
+            <!-- <div class="box">
+              <p><span> age: </span> 20</p>
+              <p><span> phone : </span> +91 XXX-XXX-XXXX</p>
+            </div> -->
+            <div class="box">
+              <p><span> email : </span> munawaramin99@gmail.com</p>
+              <p><span> place : </span> Surakarta, Indonesia - 57146</p>
+            </div>
+        </div>
+        
+        <div class="resumebtn">
+            <a href="https://drive.google.com/file/d/1drkFXJAlSVfQDOX6pF6rIDyp4iReMuQZ/view?usp=drive_link" target="_blank" class="btn"><span>Resume</span>
+                <i class="fas fa-chevron-right"></i>
+            </a>
+        </div>
+
+    </div>
+    </div>
+</section>
+<!-- about section ends -->
+
+<!-- skills section starts -->
+<section class="skills" id="skills">
+
+    <h2 class="heading"><i class="fas fa-laptop-code"></i> Skills & <span>Abilities</span></h2>
+
+    <div class="container">
+          <div class="row" id="skillsContainer">
+
+
+      </div>
+</div>
+</section>
+<!-- skills section ends -->
+
+
+<!-- education section starts -->
+<section class="education" id="education">
+  <h1 class="heading"><i class="fas fa-graduation-cap"></i> My <span>Education</span></h1>
+  
+  <div class="box-container" style="text-align: left;">
+    <!-- University Box -->
+    <div class="box">
+      <div class="image">
+        <img draggable="false" src="./assets/images/educat/college.png" alt="">
+      </div>
+      <div class="content" style="text-align: left;">
+        <h3 style="text-align: left;">Bachelor of Informatics</h3>
+        <p style="text-align: left;">Universitas Tiga Serangkai | TSU</p>
+        <h4 style="text-align: left;">2021-2025 | Student</h4>
+        
+        <div class="info-items" style="text-align: left;">
+          <div class="info-row">
+            <i class="fas fa-users"></i>
+            <span>Organizations:</span>
+          </div>
+          <div class="info-row">
+            <span>- LDK Liwaul'islam</span>
+          </div>
+          <div class="info-row">
+            <span>- Community Of Information Technology (CIT)</span>
+          </div>
+          <div class="info-row">
+            <span>- Sosial Trainning Camp (STC)</span>
+          </div>
+<div class="info-row" style="display: flex; justify-content: center; align-items: center; gap: 10px; text-align: center;">
+  <i class="fas fa-map-marker-alt"></i>
+  <span>Location: H Samanhudi No.84-86, Purwosari, Surakarta</span>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- SMK Box -->
+    <div class="box">
+      <div class="image">
+        <img draggable="false" src="./assets/images/educat/school1.png" alt="">
+      </div>
+      <div class="content" style="text-align: left;">
+        <h3 style="text-align: left;">Computer and Network Engineering</h3>
+        <p style="text-align: left;">SMK Batik 1 Surakarta | TKJ</p>
+        <h4 style="text-align: left;">2018-2021 | Student</h4>
+        
+        <div class="info-items" style="text-align: left;">
+          <div class="info-row">
+            <i class="fas fa-users"></i>
+            <span>Organizations:</span>
+          </div>
+          <div class="info-row">
+            <span>- Multimedia</span>
+          </div>
+<div class="info-row" style="display: flex; justify-content: center; align-items: center; gap: 10px; text-align: center;">
+  <i class="fas fa-map-marker-alt"></i>
+            <span>Location: Jl. Slamet Riyadi, Pajang, Surakarta</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- experience section starts -->
+<section class="experience" id="experience">
+
+  <h2 class="heading"><i class="fas fa-briefcase"></i> Experience </h2>
+
+  <div class="timeline">
+
+    <div class="container right">
+      <div class="content">
+        <div class="tag">
+          <h2>SMK Batik 1 Surakarta</h2>
+        </div>
+        <div class="desc">
+            <h3>IT Support</h3>
+            <p>Oct 2020 - present</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container left">
+      <div class="content">
+        <div class="tag">
+          <h2>Freelance</h2>
+        </div>
+        <div class="desc">
+            <h3>IT Support</h3>
+            <p>Jul 2022 - Present</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container right">
+      <div class="content">
+        <div class="tag">
+          <h2>Prismacom</h2>
+        </div>
+        <div class="desc">
+            <h3>IT Technician | Internship</h3>
+            <p>Mar 2025 - Juli 2025</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container left">
+      <div class="content">
+        <div class="tag">
+          <h2>B'one Computer</h2>
+        </div>
+        <div class="desc">
+            <h3>IT Support| Internship</h3>
+            <p>Feb 2024 - Jul 2024</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container right">
+      <div class="content">
+        <div class="tag">
+          <h2>Dicoding Indonesia</h2>
+        </div>
+        <div class="desc">
+            <h3>Front End - Back end | Internship (MSIB) </h3>
+            <p>Aug 2023 - Dec 2023</p>
+        </div>
+      </div>
+    </div>
+
+  <div class="morebtn">
+    <a href="/experience" class="btn"><span>View All</span>
+      <i class="fas fa-arrow-right"></i>
+  </a>
+  </div>
+
+</div>
+
+</section>
+<!-- experience section ends -->
+
+<!-- work project section starts -->
+<section class="work" id="work">
+
+<h2 class="heading"><i class="fas fa-file"></i> Project <span>List</span></h2>
+
+
+  <div class="box-container">
+
+
+</div>
+
+
+</section>
+<!-- work project section ends -->
+
+<!-- certificates section starts -->
+<section class="certificates" id="certificates" style="background-color: white;">
+    <h2 class="heading" style="color: #333;"><i class="fas fa-certificate" style="color: var(--primary);"></i> My <span style="color: var(--primary);">Certificates</span></h2>
+    
+    <div class="certificates-container">
+        <!-- Certificate 1 -->
+        <div class="certificate-box">
+            <img src="./assets/certif/mtcna.png" alt="MTCNA Certificate" class="certificate-img">
+            <div class="certificate-info">
+                <h3>MTCNA</h3>
+                <p>Mikrotik | 2024</p>
+                <a href="https://drive.google.com/file/d/1sUr4TWGgTtdPqMfqdCZtVNUMGRNV5ZrE/view?usp=sharing" class="view-btn" target="_blank">View</a>
+            </div>
+        </div>
+        
+        <!-- Certificate 2 -->
+        <div class="certificate-box">
+            <img src="./assets/certif/mtcnasinus.png" alt="MTCNA SINUS Certificate" class="certificate-img">
+            <div class="certificate-info">
+                <h3>MTCNA</h3>
+                <p>SINUS | 2024</p>
+                <a href="https://drive.google.com/file/d/151-s8r6dVfV6uCPLAKhT0DU2lQWP2Y0J/view?usp=sharing" class="view-btn" target="_blank">View</a>
+            </div>
+        </div>
+        
+        <!-- Certificate 3 -->
+        <div class="certificate-box">
+            <img src="./assets/certif/LKS.jpg" alt="LKS Certificate" class="certificate-img">
+            <div class="certificate-info">
+                <h3>Information Network Cabling Competition</h3>
+                <p>Lomba LKS Tingkat KOTA Solo | 2025</p>
+                <a href="https://drive.google.com/file/d/1y3rx2OKqJ-qTRRYsSrpUnH-buaqaFP4J/view?usp=sharing" class="view-btn" target="_blank">View</a>
+            </div>
+        </div>
+        
+        <!-- Certificate 4 -->
+        <div class="certificate-box">
+            <img src="./assets/certif/bnsp.png" alt="BNSP Certificate" class="certificate-img">
+            <div class="certificate-info">
+                <h3>Computer And Network Engineering</h3>
+                <p>BNSP | 2021</p>
+                <a href="https://drive.google.com/file/d/1oWLiN3C3fU5eo_evVCYCQQzGjDw3LUln/view?usp=sharing" class="view-btn" target="_blank">View</a>
+            </div>
+        </div>
+        
+        <!-- Certificate 5 -->
+        <div class="certificate-box">
+            <img src="./assets/certif/magang.jpg" alt="Internship Certificate" class="certificate-img">
+            <div class="certificate-info">
+                <h3>IT Support</h3>
+                <p>Internship | 2024</p>
+                <a href="https://drive.google.com/file/d/1OHH5iPQAYFCEobXa-us46WMCLfjqmWvH/view?usp=sharing" class="view-btn" target="_blank">View</a>
+            </div>
+        </div>
+        
+        <!-- Certificate 6 -->
+        <div class="certificate-box">
+            <img src="./assets/certif/dicoding.png" alt="Dicoding Certificate" class="certificate-img">
+            <div class="certificate-info">
+                <h3>Front End - Back End</h3>
+                <p>Internship | 2023</p>
+                <a href="https://drive.google.com/file/d/1Z41-Ek9PZauT9-jFo8pHPWSVeQM2OrTw/view?usp=sharing" class="view-btn" target="_blank">View</a>
+            </div>
+        </div>
+
+        <!-- Certificate 7 (Baru) -->
+        <div class="certificate-box">
+            <img src="./assets/certif/dat.jpg" alt="Certificate 7" class="certificate-img">
+            <div class="certificate-info">
+                <h3>Dekstop Application trainning</h3>
+                <p>microsoft Office | 2022</p>
+                <a href="https://drive.google.com/file/d/10EFA1lqc37Elt4LvNaQEUlbugg4OvT0f/view?usp=sharing" class="view-btn" target="_blank">View</a>
+            </div>
+        </div>
+
+        <!-- Certificate 8 (Baru) -->
+        <div class="certificate-box">
+            <img src="./assets/certif/toefl.jpg" alt="Certificate 8" class="certificate-img">
+            <div class="certificate-info">
+                <h3>Toefl</h3>
+                <p>Lembaga Pendidikan Indoensia Amerika (LPIA) | 2024</p>
+                <a href="https://drive.google.com/file/d/1udouG2XO1k_NHW-VFC2-4CN1P4fZkq3W/view?usp=sharing" class="view-btn" target="_blank">View</a>
+            </div>
+        </div>
+
+        <!-- Certificate 9 (Baru) -->
+        <div class="certificate-box">
+            <img src="./assets/certif/backend.png" alt="Certificate 9" class="certificate-img">
+            <div class="certificate-info">
+                <h3>backend</h3>
+                <p>Dicoding Indoensia | 2023</p>
+                <a href="https://drive.google.com/file/d/1X6xdrJJnu6v1MtkeIm_1EShX72INC9Es/view?usp=sharing" class="view-btn" target="_blank">View</a>
+            </div>
+        </div>
+
+
+
+                        <!-- Certificate 8 (Baru) -->
+        <div class="certificate-box">
+            <img src="./assets/certif/fundamental.png" alt="Certificate 8" class="certificate-img">
+            <div class="certificate-info">
+                <h3>Web Devlopment</h3>
+                <p>Dicoding Indoensia | 2023</p>
+                <a href="https://drive.google.com/file/d/1gQRSam6HRp8oKp_qEk_zdeBkyNYAZC_s/view?usp=sharing" class="view-btn" target="_blank">View</a>
+            </div>
+        </div>
+                                <!-- Certificate 8 (Baru) -->
+        <div class="certificate-box">
+            <img src="./assets/certif/git.png" alt="Certificate 8" class="certificate-img">
+            <div class="certificate-info">
+                <h3>Belajar Git dan Github</h3>
+                <p>Dicoding Indoensia | 2023</p>
+                <a href="https://drive.google.com/file/d/1Z43wXuI-LEflRaYuP2-kj0-lCegL3AaE/view?usp=sharing" class="view-btn" target="_blank">View</a>
+            </div>
+        </div>
+
+                        <!-- Certificate 8 (Baru) -->
+        <div class="certificate-box">
+            <img src="./assets/certif/badminton.jpg" alt="Certificate 8" class="certificate-img">
+            <div class="certificate-info">
+                <h3>Winner 2 Badminton</h3>
+                <p>Immortal Cup Competition (ICC) | 2024</p>
+                <a href="https://drive.google.com/file/d/16nn6iC8nJnzBYTSZbxsio5UNbqaOS_lg/view?usp=sharing" class="view-btn" target="_blank">View</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- certificates section ends -->
+
+<!-- footer section starts -->
+<section class="footer">
+
+  <div class="box-container">
+
+      <div class="box">
+          <h3>Munawar Portfolio</h3>
+          <p>I'm glad you stopped by my portfolio website!. <br/> <br/> Feel free to connect with me on social media or through live chat.</p>
+      </div>
+
+      <div class="box">
+          <h3>quick links</h3>
+          <a href="#home"><i class="fas fa-chevron-circle-right"></i> home</a>
+          <a href="#about"><i class="fas fa-chevron-circle-right"></i> about</a>
+          <a href="#skills"><i class="fas fa-chevron-circle-right"></i> skills</a>
+          <a href="#education"><i class="fas fa-chevron-circle-right"></i> education</a>
+          <a href="#experience"><i class="fas fa-chevron-circle-right"></i> experience</a>
+          <a href="#work"><i class="fas fa-chevron-circle-right"></i> Project</a>
+          <a href="#certificates"><i class="fas fa-chevron-circle-right"></i> certificates</a>
+      </div>
+
+      <div class="box">
+          <h3>contact info</h3>
+          <p> <i class="fas fa-phone"></i>+62 XXX-XXXX-XXXX</p>
+          <p> <i class="fas fa-envelope"></i>munawaramin99@gmail.com</p>
+          <p> <i class="fas fa-map-marked-alt"></i>Surakarta, Indonesia - 57146</p>
+          <div class="share">
+           <a href="http://www.linkedin.com/in/munawar-amin/" class="fab fa-linkedin" target="_blank"></a>
+           <a href="https://github.com/MunawarAminn" class="fab fa-github" target="_blank"></a>
+           <a href="mailto:munawaramin99@gmail.com" class="fas fa-envelope" target="_blank"></a>
+           <a href="https://www.instagram.com/munawar_amin2/" class="fab fa-instagram" target="_blank"></a>
+           <a href="https://t.me/Turiss2" class="fab fa-telegram-plane" target="_blank"></a>
+          </div>
+      </div>
+  </div>
+
+  <h1 class="credit">© 2025 <a href="https://www.linkedin.com/in/munawar-amin/"> Munawar Amin</a></h1>
+
+</section>
+<!-- footer section ends -->
+
+
+<!-- scroll top btn -->
+<a href="#home" aria-label="ScrollTop" class="fas fa-angle-up" id="scroll-top"></a>
+<!-- scroll back to top -->
+
+
+<!-- ==== ALL MAJOR JAVASCRIPT CDNS STARTS ==== -->
+<!-- jquery cdn -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- typed.js cdn -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js" integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- particle.js links -->
+<script src="./assets/js/particles.min.js"></script>
+<script src="./assets/js/app.js"></script>
+
+<!-- vanilla tilt.js links -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- scroll reveal anim -->
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
+    ></script>
+
+<!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
+
+<script src="./assets/js/script.js"></script>
+<script>
+    // Modal functionality for certificates
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get all view buttons
+        const viewButtons = document.querySelectorAll('.view-btn');
+        
+        // Create modal elements
+        const modal = document.createElement('div');
+        modal.className = 'modal';
+        modal.innerHTML = `
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modal-img">
+        `;
+        document.body.appendChild(modal);
+        
+        // Get modal elements
+        const modalImg = document.getElementById('modal-img');
+        const closeBtn = document.querySelector('.close');
+        
+        // Add click event to all view buttons
+        viewButtons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                if (!button.hasAttribute('target')) {
+                    e.preventDefault();
+                    modal.style.display = 'block';
+                    modalImg.src = this.getAttribute('href');
+                }
+            });
+        });
+        
+        // Close modal when clicking X
+        closeBtn.addEventListener('click', function() {
+            modal.style.display = 'none';
+        });
+        
+        // Close modal when clicking outside image
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    });
+</script>
+</body>
+</html>
